@@ -1,0 +1,7 @@
+{
+  "name": "Agentic Vision — AI Creative & Digital Studio",
+  "description": "Agentic Vision creates AI-powered content, cinematic visuals, websites, web applications and digital experiences for modern brands and businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
