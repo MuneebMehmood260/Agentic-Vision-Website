@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowUp, Sparkles, Instagram, Facebook, Linkedin, Youtube, Twitter } from 'lucide-react';
+import { ArrowUp, Instagram, Facebook, Github, MessageCircle, Mail } from 'lucide-react';
 import { playSound } from '../utils/sound';
+import { STUDIO_CONFIG } from '../config/contact';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -21,10 +22,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onHover }) => {
   ];
 
   const socialLinks = [
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com' },
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com' }
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/agenticvision01/' },
+    { name: 'Github', icon: Github, href: 'https://github.com/MuneebMehmood260' },
+    { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61593743398342' }
   ];
 
   return (
@@ -113,8 +113,29 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onHover }) => {
               })}
             </div>
 
-            <div className="p-4 rounded-xl bg-zinc-950 border border-white/5 text-[11px] font-mono text-zinc-400 mt-4">
-              Direct Contact: <a href="mailto:hello@agenticvision.studio" className="text-violet-300 hover:underline">hello@agenticvision.studio</a>
+            <div className="p-4 rounded-xl bg-zinc-950 border border-white/10 text-xs font-mono text-zinc-400 mt-4 space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-zinc-500 uppercase text-[10px]">WhatsApp:</span>
+                <a
+                  href={`https://wa.me/${STUDIO_CONFIG.whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:underline flex items-center gap-1.5"
+                >
+                  <MessageCircle className="w-3.5 h-3.5" />
+                  <span>{STUDIO_CONFIG.whatsappDisplay}</span>
+                </a>
+              </div>
+              <div className="flex items-center justify-between pt-1.5 border-t border-white/5">
+                <span className="text-zinc-500 uppercase text-[10px]">Email:</span>
+                <a
+                  href={`mailto:${STUDIO_CONFIG.email}`}
+                  className="text-violet-300 hover:underline flex items-center gap-1.5"
+                >
+                  <Mail className="w-3.5 h-3.5" />
+                  <span>{STUDIO_CONFIG.email}</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
