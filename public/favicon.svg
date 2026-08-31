@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Metallic Gradients -->
+    <linearGradient id="chromeLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#E2E8F0" />
+      <stop offset="60%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <linearGradient id="chromeMid" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="45%" stop-color="#CBD5E1" />
+      <stop offset="85%" stop-color="#64748B" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+
+    <linearGradient id="chromeDark" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="35%" stop-color="#475569" />
+      <stop offset="70%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+
+    <linearGradient id="metallicHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#94A3B8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#334155" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="specularGlow" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#E0E7FF" />
+      <stop offset="50%" stop-color="#A5B4FC" />
+      <stop offset="100%" stop-color="#4338CA" />
+    </linearGradient>
+
+    <!-- Bevel & Shadow Filters -->
+    <filter id="metallicBevel" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <g filter="url(#metallicBevel)">
+    <!-- Top Arrow Unit (Pointing Up, looping Right) -->
+    <!-- Outer Beveled Path -->
+    <path
+      d="M 256 70 
+         L 326 182 
+         L 288 182 
+         L 288 238 
+         Q 288 266 312 284 
+         L 320 290 
+         L 294 322 
+         L 284 314 
+         Q 246 284 246 238 
+         L 246 182 
+         L 208 182 
+         Z"
+      fill="url(#chromeLight)"
+      stroke="#1E293B"
+      stroke-width="2.5"
+      stroke-linejoin="round"
+    />
+    
+    <!-- Inner Core & Reflection for Top Unit -->
+    <path
+      d="M 256 86 
+         L 310 174 
+         L 280 174 
+         L 280 238 
+         Q 280 258 298 274 
+         L 292 282 
+         Q 254 252 254 238 
+         L 254 174 
+         L 224 174 
+         Z"
+      fill="url(#chromeMid)"
+      opacity="0.85"
+    />
+
+    <!-- Bottom-Left Arrow Unit (Pointing Down-Left, looping Right/Up) -->
+    <g transform="rotate(120, 256, 280)">
+      <path
+        d="M 256 70 
+           L 326 182 
+           L 288 182 
+           L 288 238 
+           Q 288 266 312 284 
+           L 320 290 
+           L 294 322 
+           L 284 314 
+           Q 246 284 246 238 
+           L 246 182 
+           L 208 182 
+           Z"
+        fill="url(#chromeDark)"
+        stroke="#0F172A"
+        stroke-width="2.5"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M 256 86 
+           L 310 174 
+           L 280 174 
+           L 280 238 
+           Q 280 258 298 274 
+           L 292 282 
+           Q 254 252 254 238 
+           L 254 174 
+           L 224 174 
+           Z"
+        fill="url(#chromeLight)"
+        opacity="0.85"
+      />
+    </g>
+
+    <!-- Bottom-Right Arrow Unit (Pointing Down-Right / looping Up-Left) -->
+    <g transform="rotate(240, 256, 280)">
+      <path
+        d="M 256 70 
+           L 326 182 
+           L 288 182 
+           L 288 238 
+           Q 288 266 312 284 
+           L 320 290 
+           L 294 322 
+           L 284 314 
+           Q 246 284 246 238 
+           L 246 182 
+           L 208 182 
+           Z"
+        fill="url(#chromeMid)"
+        stroke="#1E293B"
+        stroke-width="2.5"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M 256 86 
+           L 310 174 
+           L 280 174 
+           L 280 238 
+           Q 280 258 298 274 
+           L 292 282 
+           Q 254 252 254 238 
+           L 254 174 
+           L 224 174 
+           Z"
+        fill="url(#chromeDark)"
+        opacity="0.85"
+      />
+    </g>
+    
+    <!-- Central Specular Highlight Overlay -->
+    <circle cx="256" cy="275" r="18" fill="url(#specularGlow)" opacity="0.35" filter="blur(6px)" />
+  </g>
+</svg>

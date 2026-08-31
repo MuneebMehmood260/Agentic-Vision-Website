@@ -13,7 +13,7 @@ export const STUDIO_CONFIG = {
   email: (import.meta as unknown as { env?: { VITE_WHATSAPP_NUMBER?: string; VITE_CONTACT_EMAIL?: string } }).env?.VITE_CONTACT_EMAIL || 'agenticvision01@gmail.com',
   emailSubject: 'New Project Inquiry — Agentic Vision',
   responseTime: 'Under 12 Hours (Guaranteed)',
-  coverage: 'Global / Americas, EMEA, APAC',
+  coverage: 'Global / Pakistan, EMEA, APAC',
   status: 'Accepting select client projects for Q2/Q3 2026'
 };
 
